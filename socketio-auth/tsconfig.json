@@ -1,0 +1,16 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./build/",
+        "sourceMap": true,
+        "rootDir": "./src"
+    },
+    "include": [
+        "./src/**/*.ts"
+    ]
+}
