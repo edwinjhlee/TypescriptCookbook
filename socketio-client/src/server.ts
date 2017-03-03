@@ -5,8 +5,9 @@ let server = http.createServer()
 let io_ins = io(server)
 
 io_ins.on("connection", (client) => {
-    client.on('event', (data: string)=>{
+    client.on('event', (data: string, callback: (string:string)=>{})=>{
         console.log(data)
+        callback("client-respsonse: " + data)
     })
 
     client.on("disconnect", () => {
@@ -15,4 +16,4 @@ io_ins.on("connection", (client) => {
 
 })
 
-server.listen(8080)
+server.listen(8088)
